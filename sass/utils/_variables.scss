@@ -1,0 +1,151 @@
+/*fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
+
+$font-primary: ("Roboto", sans-serif);
+$font-logo: ("Raleway", sans-serif);
+
+/*colors*/
+$primary-text-color: rgba(117, 117, 117, 1);
+$primary-title-color: rgba(33, 33, 33, 1);
+$primary-white-color: rgba(255, 255, 255, 1);
+$accent-color: rgba(33, 150, 243, 1);
+$button-color: rgba(245, 244, 250, 1);
+
+$bg-footer-color: rgba(47, 48, 58, 1);
+$bg-secondary-color: rgba(245, 244, 250, 1);
+$background-color-activity: rgba(47, 48, 58, 0.8);
+$backdrop-background-color: rgba(0, 0, 0, 0.1);
+
+$client-team-icon-color: rgba(175, 177, 184, 1);
+
+$accent-color-portfolio-card: rgba(33, 150, 243, 0.9);
+
+$input-modal-form-border: rgba(33, 33, 33, 0.2);
+$header-border-color: rgba(236, 236, 236, 1);
+
+/*animation*/
+$time-animation: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+/*global styles*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+body {
+  max-width: 1600px;
+
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__title {
+    margin: 0 auto 50px;
+
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+.logo {
+  color: $accent-color;
+  font-family: $font-logo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  &--header {
+    color: $primary-title-color;
+  }
+
+  &--footer {
+    color: $primary-white-color;
+  }
+}
+
+%btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+
+  color: $primary-white-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  background-color: $accent-color;
+  border: 0 solid transparent;
+  border-radius: 4px;
+
+  transition: box-shadow $time-animation $timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

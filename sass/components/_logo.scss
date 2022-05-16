@@ -1,0 +1,33 @@
+.logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+
+  align-items: center;
+
+  font-family: raleway;
+  font-size: 26px;
+  line-height: 1.192;
+  font-weight: 700;
+
+  color: $accent-color;
+  transition: text-shadow $time-animation $timing-function;
+
+  &--header {
+    color: $primary-title-color;
+  }
+
+  &:hover,
+  &:focus {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &--footer {
+    color: $primary-white-color;
+  }
+
+  &--margin {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
