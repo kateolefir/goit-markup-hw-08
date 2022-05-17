@@ -1,0 +1,54 @@
+.client__title {
+  margin-bottom: 50px;
+
+  font-family: $font-primary;
+  color: $primary-title-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+}
+
+.client__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client__item {
+  width: 170px;
+  height: 92px;
+
+  transition: color $time-animation $timing-function,
+    border-color $time-animation $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.client__icon {
+  margin: 16px 32px;
+  fill: currentColor;
+}
+
+.client__link {
+  width: 170px;
+  height: 92px;
+  display: block;
+  border-radius: 4%;
+  border: 1px solid $client-team-icon-color;
+  background-color: $primary-white-color;
+  color: $client-team-icon-color;
+
+  transition: color $time-animation $timing-function,
+    border-color $time-animation $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
