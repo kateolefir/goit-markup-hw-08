@@ -1,5 +1,11 @@
 .client__title {
-  margin-bottom: 50px;
+  @media (min-width: 480px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   font-family: $font-primary;
   color: $primary-title-color;
@@ -11,13 +17,31 @@
 
 .client__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 }
 
 .client__item {
-  width: 170px;
-  height: 92px;
+  @media (min-width: 480px) {
+    width: 210px;
+    height: 92px;
+
+    &:not(:nth-of-type(n + 5)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 224px;
+
+    &:nth-of-type(n + 4) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 170px;
+  }
 
   transition: color $time-animation $timing-function,
     border-color $time-animation $timing-function;
@@ -30,13 +54,24 @@
 }
 
 .client__icon {
-  margin: 16px 32px;
+  display: flex;
+  margin: 16px auto;
   fill: currentColor;
 }
 
 .client__link {
-  width: 170px;
-  height: 92px;
+  @media (min-width: 480px) {
+    width: 210px;
+    height: 92px;
+  }
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 170px;
+  }
   display: block;
   border-radius: 4%;
   border: 1px solid $client-team-icon-color;

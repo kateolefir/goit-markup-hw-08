@@ -1,13 +1,7 @@
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-
   align-items: center;
 
   font-family: raleway;
-  font-size: 26px;
-  line-height: 1.192;
   font-weight: 700;
 
   color: $accent-color;
@@ -26,8 +20,42 @@
     color: $primary-white-color;
   }
 
+  @media screen and (min-width: 480px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 1.174;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 88px;
+
+    font-size: 24px;
+    line-height: 1.291;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
   &--margin {
     display: block;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) {
+      text-align: center;
+      padding: 0;
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: 1120px) {
+      text-align: left;
+    }
   }
 }

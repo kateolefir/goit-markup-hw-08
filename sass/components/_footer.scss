@@ -4,12 +4,36 @@
   padding-bottom: 60px;
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1200px) {
+      align-items: baseline;
+    }
   }
 
   &__group {
-    margin-right: 70px;
+    @media (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 61px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: 70px;
+    }
+  }
+
+  &__list {
+    @media (min-width: 480px) {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      text-align: left;
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -33,11 +57,33 @@
   }
 
   &__social {
+    @media (min-width: 480px) {
+      margin: auto;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: 75px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      margin: 0;
+    }
     width: 206px;
     height: 80px;
   }
 
   &__title {
+    @media (min-width: 480px) and (max-width: 1199px) {
+      text-align: center;
+    }
+
+    @media (min-width: 1200px) {
+      text-align: left;
+    }
     margin-bottom: 20px;
 
     font-family: $font-primary;
@@ -91,9 +137,25 @@
   display: block;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
+
+  @media (min-width: 768px) {
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0;
+    margin-left: auto;
+  }
 
   &__title {
+    @media (min-width: 480px) and (max-width: 1199px) {
+      text-align: center;
+    }
+
+    @media (min-width: 1200px) {
+      text-align: left;
+    }
+
     margin-bottom: 20px;
 
     font-family: $font-primary;
@@ -105,10 +167,25 @@
 
     color: $primary-white-color;
   }
-
+  &__form {
+    @media (min-width: 480px) and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   &__input {
-    width: 358px;
-    height: 50px;
+    @media (min-width: 480px) {
+      width: 450px;
+      height: 50px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+    }
 
     margin-right: 7.79px;
     padding: 15px 16px;
