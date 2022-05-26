@@ -40,8 +40,11 @@
 }
 
 .team__list {
+  @media (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   display: flex;
-  flex-wrap: wrap;
 }
 
 .team__item {
@@ -69,20 +72,6 @@
       margin-right: 30px;
     }
     margin-bottom: 0;
-  }
-}
-
-.team__img {
-  @media (min-width: 480px) {
-    width: 450px;
-  }
-
-  @media (min-width: 768px) {
-    width: 354px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 270px;
   }
 }
 

@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   border-bottom: 1px solid $header-border-color;
 
   &__container {
@@ -92,6 +93,14 @@
   @media (min-width: 768px) {
     &__icon {
       margin-right: 8px;
+      &--mail {
+        width: 14px;
+        height: 10px;
+      }
+      &--tel {
+        width: 10px;
+        height: 14px;
+      }
 
       fill: currentColor;
     }
@@ -122,6 +131,16 @@
   @media (min-width: 1200px) {
     &__icon {
       margin-right: 10px;
+
+      &--mail {
+        width: 16px;
+        height: 12px;
+      }
+
+      &--tel {
+        width: 10px;
+        height: 16px;
+      }
     }
 
     &__item:nth-of-type(n) > &__link {
@@ -137,5 +156,176 @@
     &__item:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.mob-menu__btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  display: inline-flex;
+  z-index: 1;
+  margin: 0;
+  padding: 10px 0;
+
+  background-color: transparent;
+  border: none;
+
+  transition: fill $time-animation $timing-function;
+
+  &--is-open {
+    position: fixed;
+    top: 0;
+    right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mob-menu {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 48px 40px 40px 40px;
+    background-color: $primary-white-color;
+    z-index: 2;
+    overflow-y: scroll;
+
+    &--is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__list {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 302px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 40px;
+      line-height: 1.18;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $primary-title-color;
+
+    transition: color $time-animation $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__social {
+    display: inline-block;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &-item {
+      display: inline-block;
+      padding-right: 10px;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+
+      &:not(:first-child) {
+        padding-left: 10px;
+
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+      }
+    }
+
+    &-link {
+      color: $accent-color;
+    }
+  }
+}
+
+.contact-menu__list {
+  display: flex;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+}
+
+.contact-menu__link {
+  display: flex;
+
+  align-items: center;
+
+  color: $primary-text-color;
+  transition: color $time-animation $timing-function;
+
+  @media screen and (max-width: 767px) {
+    &--tel {
+      color: $accent-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact-menu__tel {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+  }
+}
+
+.contact-menu__mail {
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
   }
 }

@@ -18,12 +18,20 @@
   <body>
     <header class="header">
       <!------HEADER NAVIGATION------>
-
       <div class="container header__container">
         <nav class="site-nav">
           <a href="./index.html" class="logo"
             >Web<span class="logo--header">Studio</span>
           </a>
+          <button class="mob-menu__btn" data-menu-open>
+            <svg width="40" height="40">
+              <use
+                class="mob-menu__open"
+                href="./images/icons.svg#icon-menu_tel"
+              ></use>
+            </svg>
+          </button>
+
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студия</a>
@@ -56,6 +64,85 @@
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mob-menu is-hidden" id="mobile-menu" data-menu>
+        <button class="mob-menu__btn" data-menu-close>
+          <svg width="40" height="40">
+            <use
+              class="mob-menu__close"
+              href="./images/icons.svg#icon-close_tel_menu"
+            ></use>
+          </svg>
+        </button>
+
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item">
+            <a href="./index.html" class="mob-menu__link">Студия</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="" class="mob-menu__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="contact contact-menu__list">
+          <li class="contact-menu__item contact-menu__mail">
+            <a href="mailto:info@devstudio.com" class="contact-menu__link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contact-menu__item contact-menu__tel">
+            <a href="tel:+380961111111" class="contact-menu__link--tel">
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mob-menu__social">
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="instagram"
+              >Instagram</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="twitter"
+              >Twitter</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="facebook"
+              >Facebook</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="linkedIn"
+              >LinkedIn</a
             >
           </li>
         </ul>
@@ -116,12 +203,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio1.jpg"
-                    alt="Макет веб-сайта"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-1-desk-370.jpg   370w,
+                        ./images/portfolio-1-desk-740.jpg   740w,
+                        ./images/portfolio-1-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-1-tab-354.jpg   354w,
+                        ./images/portfolio-1-tab-708.jpg   708w,
+                        ./images/portfolio-1-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-1-tel-450.jpg   450w,
+                        ./images/portfolio-1-tel-900.jpg   900w,
+                        ./images/portfolio-1-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-1-tab-354.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -140,12 +254,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio2.jpg"
-                    alt="Макет дизайна"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-2-desk-370.jpg   370w,
+                        ./images/portfolio-2-desk-740.jpg   740w,
+                        ./images/portfolio-2-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-2-tab-354.jpg   354w,
+                        ./images/portfolio-2-tab-708.jpg   708w,
+                        ./images/portfolio-2-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-2-tel-450.jpg   450w,
+                        ./images/portfolio-2-tel-900.jpg   900w,
+                        ./images/portfolio-2-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-2-tab-354.jpg"
+                      alt="Макет дизайна"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -166,12 +307,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio3.jpg"
-                    alt="Макет приложения"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-3-desk-370.jpg   370w,
+                        ./images/portfolio-3-desk-740.jpg   740w,
+                        ./images/portfolio-3-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-3-tab-354.jpg   354w,
+                        ./images/portfolio-3-tab-708.jpg   708w,
+                        ./images/portfolio-3-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-3-tel-450.jpg   450w,
+                        ./images/portfolio-3-tel-900.jpg   900w,
+                        ./images/portfolio-3-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-3-tab-354.jpg"
+                      alt="Макет приложения"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -190,12 +358,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio4.jpg"
-                    alt="Макет маркетинга"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-4-desk-370.jpg   370w,
+                        ./images/portfolio-4-desk-740.jpg   740w,
+                        ./images/portfolio-4-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-4-tab-354.jpg   354w,
+                        ./images/portfolio-4-tab-708.jpg   708w,
+                        ./images/portfolio-4-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-4-tel-450.jpg   450w,
+                        ./images/portfolio-4-tel-900.jpg   900w,
+                        ./images/portfolio-4-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-4-tab-354.jpg"
+                      alt="Макет маркетинга"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -214,11 +409,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio5.jpg"
-                    alt="Макет приложения"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-5-desk-370.jpg   370w,
+                        ./images/portfolio-5-desk-740.jpg   740w,
+                        ./images/portfolio-5-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-5-tab-354.jpg   354w,
+                        ./images/portfolio-5-tab-708.jpg   708w,
+                        ./images/portfolio-5-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-5-tel-450.jpg   450w,
+                        ./images/portfolio-5-tel-900.jpg   900w,
+                        ./images/portfolio-5-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-5-tab-354.jpg"
+                      alt="Макет приложения"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -237,12 +460,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio6.jpg"
-                    alt="Макет приложения"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-6-desk-370.jpg   370w,
+                        ./images/portfolio-6-desk-740.jpg   740w,
+                        ./images/portfolio-6-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-6-tab-354.jpg   354w,
+                        ./images/portfolio-6-tab-708.jpg   708w,
+                        ./images/portfolio-6-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-6-tel-450.jpg   450w,
+                        ./images/portfolio-6-tel-900.jpg   900w,
+                        ./images/portfolio-6-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-6-tab-354.jpg"
+                      alt="Макет приложения"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -261,12 +511,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio7.jpg"
-                    alt="Макет дизайна"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-7-desk-370.jpg   370w,
+                        ./images/portfolio-7-desk-740.jpg   740w,
+                        ./images/portfolio-7-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-7-tab-354.jpg   354w,
+                        ./images/portfolio-7-tab-708.jpg   708w,
+                        ./images/portfolio-7-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-7-tel-450.jpg   450w,
+                        ./images/portfolio-7-tel-900.jpg   900w,
+                        ./images/portfolio-7-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-7-tab-354.jpg"
+                      alt="Макет дизайна"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -285,12 +562,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio8.jpg"
-                    alt="Макет маркетинга"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-8-desk-370.jpg   370w,
+                        ./images/portfolio-8-desk-740.jpg   740w,
+                        ./images/portfolio-8-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-8-tab-354.jpg   354w,
+                        ./images/portfolio-8-tab-708.jpg   708w,
+                        ./images/portfolio-8-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-8-tel-450.jpg   450w,
+                        ./images/portfolio-8-tel-900.jpg   900w,
+                        ./images/portfolio-8-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-8-tab-354.jpg"
+                      alt="Макет маркетинга"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -309,12 +613,39 @@
             <li class="portfolio__item">
               <a href="./index.html" class="portfolio__link"
                 ><div class="portfolio__card">
-                  <img
-                    src="./images/portfolio9.jpg"
-                    alt="Макет приложения"
-                    width="370"
-                    class="portfolio__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-9-desk-370.jpg   370w,
+                        ./images/portfolio-9-desk-740.jpg   740w,
+                        ./images/portfolio-9-desk-1110.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-9-tab-354.jpg   354w,
+                        ./images/portfolio-9-tab-708.jpg   708w,
+                        ./images/portfolio-9-tab-1062.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-9-tel-450.jpg   450w,
+                        ./images/portfolio-9-tel-900.jpg   900w,
+                        ./images/portfolio-9-tel-1350.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="100vw"
+                    />
+                    <img
+                      src="./images/portfolio-tab-354.jpg"
+                      alt="Макет приложения"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс предлагает комплексные предложения с разным уровнем

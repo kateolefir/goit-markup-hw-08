@@ -24,6 +24,15 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo--header">Studio</span>
           </a>
+          <button class="mob-menu__btn" data-menu-open>
+            <svg width="40" height="40">
+              <use
+                class="mob-menu__open"
+                href="./images/icons.svg#icon-menu_tel"
+              ></use>
+            </svg>
+          </button>
+
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a
@@ -56,6 +65,85 @@
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mob-menu is-hidden" id="mobile-menu" data-menu>
+        <button class="mob-menu__btn" data-menu-close>
+          <svg width="40" height="40">
+            <use
+              class="mob-menu__close"
+              href="./images/icons.svg#icon-close_tel_menu"
+            ></use>
+          </svg>
+        </button>
+
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item">
+            <a href="./index.html" class="mob-menu__link">Студия</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="" class="mob-menu__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="contact contact-menu__list">
+          <li class="contact-menu__item contact-menu__mail">
+            <a href="mailto:info@devstudio.com" class="contact-menu__link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contact-menu__item contact-menu__tel">
+            <a href="tel:+380961111111" class="contact-menu__link--tel">
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mob-menu__social">
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="instagram"
+              >Instagram</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="twitter"
+              >Twitter</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="facebook"
+              >Facebook</a
+            >
+          </li>
+          <li class="mob-menu__social-item">
+            <a
+              href="./index.html"
+              class="mob-menu__social-link"
+              target="_blank"
+              rel="noopener noreferrer nofolow"
+              aria-label="linkedIn"
+              >LinkedIn</a
             >
           </li>
         </ul>
@@ -227,21 +315,40 @@
           <ul class="activity__list">
             <li class="activity__item">
               <img
-                src="./images/programerworking.jpg"
-                alt="programer working"
-                width="370"
+                srcset="
+                  ./images/features-1-desk-370.jpg   370w,
+                  ./images/features-1-desk-740.jpg   740w,
+                  ./images/features-1-desk-1110.jpg 1110w
+                "
+                src="./images/features-1-desk-370.jpg"
+                alt="computer"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <p class="activity__description">Десктопные приложения</p>
             </li>
             <li class="activity__item">
-              <img src="./images/designer.jpg" alt="designer" width="370" />
+              <img
+                srcset="
+                  ./images/features-2-desk-370.jpg   370w,
+                  ./images/features-2-desk-740.jpg   740w,
+                  ./images/features-2-desk-1110.jpg 1110w
+                "
+                src="./images/features-2-desk-370.jpg"
+                alt="designer"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+              />
               <p class="activity__description">Мобильные приложения</p>
             </li>
             <li class="activity__item">
               <img
-                src="./images/creativeartist.jpg"
+                srcset="
+                  ./images/features-3-desk-370.jpg   370w,
+                  ./images/features-3-desk-740.jpg   740w,
+                  ./images/features-3-desk-1110.jpg 1110w
+                "
+                src="./images/features-3-desk-370.jpg"
                 alt="creative artist"
-                width="370"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <p class="activity__description">Дизайнерские решения</p>
             </li>
@@ -256,10 +363,14 @@
           <ul class="team__list">
             <li class="team__item">
               <img
-                class="team__img"
-                src="./images/idemyanenko.jpg"
-                alt="Сотрудник компании"
-                width="270"
+                srcset="
+                  ./images/team-1-tel-450.jpg   450w,
+                  ./images/team-1-tel-900.jpg   900w,
+                  ./images/team-1-tel-1350.jpg 1350w
+                "
+                src="./images/team-1-tel-450.jpg"
+                alt="сотрудник компании"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="team_group">
                 <h3 class="team__lable">Игорь Демьяненко</h3>
@@ -298,10 +409,14 @@
             </li>
             <li class="team__item">
               <img
-                class="team__img"
-                src="./images/orepina.jpg"
-                alt="Сотрудник компании"
-                width="270"
+                srcset="
+                  ./images/team-2-tel-450.jpg   450w,
+                  ./images/team-2-tel-900.jpg   900w,
+                  ./images/team-2-tel-1350.jpg 1350w
+                "
+                src="./images/team-2-tel-450.jpg"
+                alt="сотрудник компании"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="team_group">
                 <h3 class="team__lable">Ольга Репина</h3>
@@ -340,10 +455,14 @@
             </li>
             <li class="team__item">
               <img
-                class="team__img"
-                src="./images/ntarasov.jpg"
-                alt="Сотрудник компании"
-                width="270"
+                srcset="
+                  ./images/team-3-tel-450.jpg   450w,
+                  ./images/team-3-tel-900.jpg   900w,
+                  ./images/team-3-tel-1350.jpg 1350w
+                "
+                src="./images/team-3-tel-450.jpg"
+                alt="сотрудник компании"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="team_group">
                 <h3 class="team__lable">Николай Тарасов</h3>
@@ -382,10 +501,14 @@
             </li>
             <li class="team__item">
               <img
-                class="team__img"
-                src="./images/mermakov.jpg"
-                alt="Сотрудник компании"
-                width="270"
+                srcset="
+                  ./images/team-4-tel-450.jpg   450w,
+                  ./images/team-4-tel-900.jpg   900w,
+                  ./images/team-4-tel-1350.jpg 1350w
+                "
+                src="./images/team-4-tel-450.jpg"
+                alt="сотрудник компании"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <div class="team_group">
                 <h3 class="team__lable">Михаил Ермаков</h3>
