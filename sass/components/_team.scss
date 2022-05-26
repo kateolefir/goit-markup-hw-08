@@ -40,11 +40,15 @@
 }
 
 .team__list {
-  @media (max-width: 1199px) {
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
-  display: flex;
 }
 
 .team__item {
@@ -55,6 +59,11 @@
 
   @media (min-width: 480px) {
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
   }
 
   @media (min-width: 768px) {
