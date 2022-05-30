@@ -20,7 +20,7 @@
     color: $primary-white-color;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
     margin-right: auto;
@@ -49,7 +49,7 @@
     display: block;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
       text-align: center;
       padding: 0;
       margin-right: 0;

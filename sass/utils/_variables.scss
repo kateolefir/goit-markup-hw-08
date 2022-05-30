@@ -1,8 +1,8 @@
 /*fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
 
-$font-primary: ("Roboto", sans-serif);
-$font-logo: ("Raleway", sans-serif);
+$font-primary: ('Roboto', sans-serif);
+$font-logo: ('Raleway', sans-serif);
 
 /*colors*/
 $primary-text-color: rgba(117, 117, 117, 1);
@@ -84,7 +84,6 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 

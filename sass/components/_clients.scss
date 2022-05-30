@@ -1,5 +1,5 @@
 .client__title {
-  @media (min-width: 480px) {
+  @media (max-width: 1199px) {
     margin-bottom: 30px;
   }
 
@@ -22,8 +22,8 @@
 }
 
 .client__item {
-  @media (min-width: 480px) {
-    width: 210px;
+  @media (max-width: 767px) {
+    max-width: 210px;
     height: 92px;
 
     &:not(:nth-of-type(n + 5)) {
@@ -60,8 +60,8 @@
 }
 
 .client__link {
-  @media (min-width: 480px) {
-    width: 210px;
+  @media (max-width: 767px) {
+    max-width: 210px;
     height: 92px;
   }
 
