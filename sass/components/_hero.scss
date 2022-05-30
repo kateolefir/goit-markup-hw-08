@@ -15,11 +15,13 @@
   background-size: cover;
 
   @media (max-width: 767px) {
-    max-width: 480px;
+    max-width: 767px;
     height: 400px;
 
     padding-top: 118px;
     padding-bottom: 118px;
+    margin-left: auto;
+    margin-right: auto;
 
     &__title {
       margin-bottom: 30px;
@@ -37,7 +39,28 @@
   }
 
   @media (min-width: 768px) {
-    width: 768px;
+    min-width: 768px;
+    height: 400px;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      margin-bottom: 30px;
+
+      font-family: $font-primary;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.615;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+
+      color: $primary-white-color;
+    }
   }
 
   @media (min-width: 1200px) {

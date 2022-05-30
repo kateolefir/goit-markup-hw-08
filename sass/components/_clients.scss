@@ -23,7 +23,7 @@
 
 .client__item {
   @media (max-width: 767px) {
-    max-width: 210px;
+    width: calc((100% - 4 * 15px) / 2);
     height: 92px;
 
     &:not(:nth-of-type(n + 5)) {
@@ -32,11 +32,18 @@
   }
 
   @media (min-width: 768px) {
-    width: 224px;
+    width: calc((100% - 6 * 15px) / 3);
+    max-width: 224px;
+    height: 92px;
+    margin-bottom: 30px;
 
     &:nth-of-type(n + 4) {
       margin-bottom: 0;
     }
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 15px;
   }
 
   @media (min-width: 1200px) {
@@ -61,17 +68,13 @@
 
 .client__link {
   @media (max-width: 767px) {
-    max-width: 210px;
     height: 92px;
   }
 
   @media (min-width: 768px) {
-    width: 224px;
+    height: 92px;
   }
 
-  @media (min-width: 1200px) {
-    width: 170px;
-  }
   display: block;
   border-radius: 4%;
   border: 1px solid $client-team-icon-color;
